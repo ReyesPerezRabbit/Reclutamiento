@@ -12,11 +12,11 @@
     <div class="d-flex justify-content-center align-items-center vh-10">
         @auth
         <div class="justify-center">
-            <nav class="navbar navbar-expand-lg bg-purple">
+            <nav class="navbar navbar-expand-lg bg-info-subtle">
                 <div class="container-fluid">
 
                     <a class="navbar-brand" >
-                        <img src="assets/images/logo.png" width="100" height="24"
+                        <img src="https://htpro.dev/wp-content/uploads/2022/06/Group-7.svg" width="100" height="24"
                             class="d-inline-block align-text-top">
                         Panel de Administrador
                     </a>
@@ -48,15 +48,12 @@
                         </ul>
                         <ul class="navbar-nav">
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown"
                                     aria-expanded="false">
                                     {{ auth()->user()->name ?? auth()->user()->username }}
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Perfil</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
                                     <li><a class="dropdown-item" href="/logout">Cerrar sesion</a></li>
                                 </ul>
                             </li>
