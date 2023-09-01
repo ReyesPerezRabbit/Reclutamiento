@@ -67,7 +67,7 @@
                                 {{-- Ya crea la autenticacion --}}
 
                                 <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
-                                    <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                                    <div class="text-black px-3 py-4 p-md-5 mx-md-4">
                                         <h4 class="mb-4 text-center">Lema</h4>
                                         <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                                             sed do eiusmod
