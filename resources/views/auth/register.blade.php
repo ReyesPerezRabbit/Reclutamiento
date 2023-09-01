@@ -32,11 +32,11 @@
                                     <h2 class="text-uppercase text-center mb-5">Crear cuenta</h2>
 
 
-                                    {{-- <div class="form-outline mb-4">
+                                    <div class="form-outline mb-4">
                                         <label class="form-label" for="form3Example3cg">Nombre completo</label>
                                         <input type="text" placeholder="Escriba su nombre" name="name"
                                             id="form3Example3cg" class="form-control form-control-lg" />
-                                    </div> --}}
+                                    </div>
 
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="form3Example1cg">Usuario</label>

@@ -15,6 +15,8 @@
 
                         <h1>Example heading <span class="badge bg-secondary">New</span></h1>
 
+                        <p class="mt-4">Bienvenido {{ auth()->user()->name ?? auth()->user()->username }}, estás autenticado</p>
+                        
                         <h1>Nuestra mision es simple: <br>
                             Crear productos digitales incleibles</h1>
 
