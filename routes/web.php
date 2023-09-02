@@ -18,9 +18,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+// Route::get('/', function () { return view('welcome');});
 
 Route::get('/register', [RegisterController::class, 'show']);
 
@@ -35,3 +33,7 @@ Route::post('/login',[LoginCrontroller::class, 'login']);
 Route::get('/home', [HomeCrontroller::class, 'index']);
 
 Route::get('/logout', [LogoutController::class, 'logout']);
+
+
+#empezar haci con estps
+Route::get('/agregar_cantidad', function () { return view('components.createCantidato');});

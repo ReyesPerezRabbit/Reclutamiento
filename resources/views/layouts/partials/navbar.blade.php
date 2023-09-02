@@ -39,7 +39,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/">Datos candidatos</a>
+                                <a class="nav-link active" aria-current="page" href="/agregar_cantidad">Añadir candidatos</a>
                             </li>
 
                             <li class="nav-item">

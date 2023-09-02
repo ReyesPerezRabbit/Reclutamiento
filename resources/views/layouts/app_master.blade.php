@@ -7,25 +7,26 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS v5.2.1 -->
+    <!-- Bootstrap CSS v5.3.1 -->
+    <link rel="stylesheet" href="{{ asset('assets/css/master.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
         rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
         crossorigin="anonymous">
-
-    <style>
-        /* Establecer un solo color de fondo */
-        body {
-            /* background-color: #87CEFA; Celeste claro */
-        }
-    </style>
 </head>
 
 <body>
 
     @include('layouts.partials.navbar')
-    <main class="container">
-        @yield('content')
-    </main>
+
+   <main>
+
+     <div class="container-fluid d-flex justify-content-center align-items-center vh-50">
+        <div class="text-center">
+            @yield('content')
+        </div>
+    </div>
+    
+   </main>
 
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
