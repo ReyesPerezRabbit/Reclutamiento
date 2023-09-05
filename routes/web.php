@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CandidatoCreateController;
 use App\Http\Controllers\HomeCrontroller;
 use App\Http\Controllers\LoginCrontroller;
 use App\Http\Controllers\LogoutController;
@@ -36,4 +37,11 @@ Route::get('/logout', [LogoutController::class, 'logout']);
 
 
 #empezar haci con estps
-Route::get('/agregar_cantidad', function () { return view('components.createCantidato');});
+
+
+Route::controller(CandidatoCreateController::class)->group(function(){
+    Route::get('Añadir_candidato','mostrar')->name('candidato.mostrar');
+    Route::post('Añadir_candidato','guardar')->name('candidato.guardar');
+    Route::get('Lista_evaluacion','lista')->name('candidato.lista');
+
+});

@@ -20,12 +20,12 @@
 
    <main>
 
-     <div class="container-fluid d-flex justify-content-center align-items-center vh-50">
+
         <div class="text-center">
             @yield('content')
         </div>
-    </div>
-    
+   
+
    </main>
 
     <!-- Bootstrap JavaScript Libraries -->
