@@ -14,7 +14,6 @@
 
                         <form action="{{ route('candidato.guardar') }}" method="POST">
                             @csrf
-
                             <h1 class="mb-5">Bienvenidos a Higtech</h1>
 
                             <div class="row">
@@ -120,7 +119,7 @@
                                 <div class="col-md-12 d-flex justify-content-center align-items-center">
                                     <div class="mb-3">
                                         <label for="cv" class="form-label">CV</label>
-                                        <input type="file" class="form-control" id="cv" name="cv">
+                                        <input type="file" class="form-control" id="cv" name="cv" required>
                                     </div>
                                 </div>
                             </div>

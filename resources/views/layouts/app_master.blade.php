@@ -24,7 +24,7 @@
         <div class="text-center">
             @yield('content')
         </div>
-   
+
 
    </main>
 

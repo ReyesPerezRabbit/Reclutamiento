@@ -41,6 +41,6 @@ class CandidatoCreateController extends Controller
         $candidato->cv = $request->cv;
 
         $candidato->save();
-        return redirect()->route('candidato.lista');
+        return redirect()->route('candidato.lista')->with('success','Candidato creado') ;
     }
 }
