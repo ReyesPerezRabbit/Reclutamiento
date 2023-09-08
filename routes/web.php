@@ -41,7 +41,9 @@ Route::get('/logout', [LogoutController::class, 'logout']);
 
 Route::controller(CandidatoCreateController::class)->group(function(){
     Route::get('Añadir_candidato','mostrar')->name('candidato.mostrar');
+
     Route::post('Añadir_candidato','guardar')->name('candidato.guardar');
+
     Route::get('Lista_evaluacion','lista')->name('candidato.lista');
 
 });

@@ -14,7 +14,8 @@ class CandidatoCreateController extends Controller
     }
     public function lista()
     {
-        return view('components.ListEvaluations');
+        $candidatocreate = CandidatoCreateModels :: orderBy('name', 'asc')->paginate();
+        return view('components.ListEvaluations',compact('candidatocreate'));
     }
 
     public function guardar(Request $request)
@@ -43,4 +44,11 @@ class CandidatoCreateController extends Controller
         $candidato->save();
         return redirect()->route('candidato.lista')->with('success','Candidato creado') ;
     }
+
+    public function lista_mostrar(){
+        // $candidatocreate = CandidatoCreateModels :: orderBy('id', 'desc')->paginate();
+
+        // return view('components.ListEvaluations', compact('candidatocreate'));
+    }
+
 }
