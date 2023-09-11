@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app_master')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Vacante</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+@section('title', 'Prueba')
 
-<body>
+@section('content')
+
     <div class="container mt-5">
         <h1>Formulario de Vacante</h1>
         <form id="miFormulario" enctype="multipart/form-data">
@@ -30,8 +25,7 @@
             </div>
             <div class="mb-3">
                 <label for="fotografia" class="form-label">Fotografía (PDF o .doc) *</label>
-                <input type="file" class="form-control" id="fotografia" name="fotografia" accept=".pdf,.doc"
-                    required>
+                <input type="file" class="form-control" id="fotografia" name="fotografia" accept=".pdf,.doc" required>
             </div>
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre *</label>
@@ -161,8 +155,5 @@
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
     </div>
-    <script src="script.js"></script>
-</body>
 
-</html>
 @endsection

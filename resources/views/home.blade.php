@@ -24,7 +24,7 @@
             @endauth
 
             {{-- para los que no están autenticados --}}
-           
+
         </div>
     </div>
 

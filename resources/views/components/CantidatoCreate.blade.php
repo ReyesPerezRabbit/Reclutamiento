@@ -7,7 +7,7 @@
 
     <div class="container">
         <div class="row justify-content-center align-items-center">
-            @auth
+
 
                 <div class=" mt-5">
                     <div class="shadow p-4 rounded">
@@ -140,7 +140,7 @@
                         </form>
                     </div>
                 </div>
-            @endauth
+          
 
             {{-- para los que no están autenticados --}}
 

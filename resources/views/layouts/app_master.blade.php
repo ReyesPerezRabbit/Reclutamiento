@@ -19,17 +19,18 @@
 
     <main>
 
-
         <div class="text-center">
-            @yield('content')
+            {{-- Para los que ya esten Logeados --}}
+            @auth
+                @yield('content')
+            @endauth
+
+            {{-- Para los que no esten Logeados --}}
             @guest
                 <div class="text-center mt-5">
                     <p>Para poder registrarse, debe iniciar sesión <a href="/login">aquí</a></p>
                 </div>
             @endguest
-        </div>
-
-
     </main>
 
     <!-- Bootstrap JavaScript Libraries -->

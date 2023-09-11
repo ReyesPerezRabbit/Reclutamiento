@@ -7,7 +7,7 @@
 
     <div class="container-fluid vh-75">
         <div class="row justify-content-center align-items-center h-75">
-            @auth
+
                 <div class=" mt-5">
                     <div class="shadow p-4 rounded">
                         @include('layouts.partials.menssage')
@@ -79,7 +79,7 @@
                         </div>
                     </div>
                 </div>
-            @endauth
+           
 
 
             {{-- para los que no están autenticados --}}

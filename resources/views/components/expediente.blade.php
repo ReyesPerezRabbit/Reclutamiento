@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
+@extends('layouts.app_expe')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Registro de Colaborador</title>
-    <!-- Incluir Bootstrap CSS -->
-    <link rel="stylesheet" href="{{ asset('assets/css/expediente.css') }}">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Agregar CSS personalizado para algunas validaciones -->
-    <style>
-        /* Agregar aquí estilos personalizados según sea necesario */
-    </style>
-</head>
+@section('title', 'Crear Candidatos')
 
-<body>
+@section('content')
 
     <div class="container mt-5">
         <div class="text-center">
@@ -108,8 +96,7 @@
             </div>
             <div class="form-group col-md-4">
                 <label for="numeroCasa">Número de Casa:</label>
-                <input type="text" class="form-control" id="numeroCasa" name="numeroCasa"
-                    placeholder="Número de Casa">
+                <input type="text" class="form-control" id="numeroCasa" name="numeroCasa" placeholder="Número de Casa">
             </div>
             <div class="form-group col-md-4">
                 <label for="municipio">Municipio:</label>
@@ -296,13 +283,4 @@
         </div>
         </form>
     </div>
-
-    <!-- Incluir Bootstrap JS (opcional, solo si necesita funcionalidad adicional) -->
-    <script src="{{ asset('assets/js/expediente.js') }}"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-
-</html>
-
+@endsection

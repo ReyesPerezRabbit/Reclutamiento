@@ -18,14 +18,19 @@
     @include('layouts.partials.navbar')
 
     <main>
-        <div>
-            @yield('content')
+
+        <div class="text-center">
+            {{-- Para los que ya esten Logeados --}}
+            @auth
+                @yield('content')
+            @endauth
+
+            {{-- Para los que no esten Logeados --}}
             @guest
-                <div class="text-center">
-                    <p class="mt-4">Para poder registrarse, debe iniciar sesión <a href="/login">aquí</a></p>
+                <div class="text-center mt-5">
+                    <p>Para poder registrarse, debe iniciar sesión <a href="/login">aquí</a></p>
                 </div>
             @endguest
-        </div>
     </main>
 
     <!-- Bootstrap JavaScript Libraries -->
