@@ -52,7 +52,7 @@
                                             <option value="casado">Casado</option>
                                             <option value="viudo">Viudo</option>
                                             <option value="soltero">Soltero</option>
-                                            <option value="divorciado">divorciado</option>
+                                            <option value="divorciado">Divorciado</option>
                                         </select>
                                     </div>
                                 </div>
@@ -73,12 +73,13 @@
                                         <select class="form-select" id="vacante" name="vacante" required>
                                             <option value="" disabled selected>Seleciona la opcion</option>
                                             <option value="Gerente">Gerente</option>
-                                            <option value="frontend">Frontend</option>
-                                            <option value="backend">Backend</option>
                                             <option value="PMO">PMO</option>
+                                            <option value="Desarrollador">Desarrollador</option>
+                                            <option value="DBA">DBA</option>
                                             <option value="Diseñador UI/UX">Diseñador UI/UX</option>
                                             <option value="Contador">Contador</option>
-                                            <option value="frontend">Frontend</option>
+                                            <option value="Operador">Operador</option>
+                                            <option value="Otro">Otro</option>
 
                                         </select>
                                     </div>
@@ -119,7 +120,7 @@
                                 </div>
                                 <div class="col-md-5">
                                     <div class="mb-3">
-                                        <label for="nota" class="form-label">Notas</label>
+                                        <label for="nota" class="form-label">Observaciones de la Entrevista</label>
                                         <input type="text" class="form-control" id="nota" name="nota" required
                                             oninput="this.value = this.value.toUpperCase()" placeholder="Notas" required>
                                     </div>
@@ -142,11 +143,7 @@
             @endauth
 
             {{-- para los que no están autenticados --}}
-            @guest
-                <div class="text-center">
-                    <p class="mt-4">Para poder registrarse, debe iniciar sesión <a href="/login">aquí</a></p>
-                </div>
-            @endguest
+
         </div>
     </div>
 @endsection

@@ -29,6 +29,7 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
+
                                         <th>Nombre</th>
                                         <th>Apellido Paterno</th>
                                         <th>Apellido Materno</th>
@@ -52,6 +53,7 @@
                                     @foreach ($candidatocreate as $listas)
                                         <tr>
                                             <th scope="row">{{ $counter++ }}</th>
+
                                             <td>{{ $listas->name }}</td>
                                             <td>{{ $listas->apellidoP }}</td>
                                             <td>{{ $listas->apellidoM }}</td>
@@ -65,7 +67,7 @@
                                             <td>{{ $listas->nota }}</td>
                                             <td>{{ $listas->cv }}</td>
                                             <td>
-                                                <a href="#" class="boton-carpeta">
+                                                <a href="{{ route('candidato.editar', $listas->id) }}" class="boton-carpeta">
                                                     <span class="carpeta-icono">&#128193;</span>
 
                                                 </a>
@@ -81,11 +83,7 @@
 
 
             {{-- para los que no están autenticados --}}
-            @guest
-                <div class="text-center">
-                    <p class="mt-4">Para poder registrarse, debe iniciar sesión <a href="/login">aquí</a></p>
-                </div>
-            @endguest
+
         </div>
     </div>
 @endsection

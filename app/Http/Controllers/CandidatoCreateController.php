@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CandidatoRequest;
 use App\Models\CandidatoCreateModels;
 
 use Illuminate\Http\Request;
@@ -45,10 +46,16 @@ class CandidatoCreateController extends Controller
         return redirect()->route('candidato.lista')->with('success','Candidato creado') ;
     }
 
-    public function lista_mostrar(){
-        // $candidatocreate = CandidatoCreateModels :: orderBy('id', 'desc')->paginate();
-
-        // return view('components.ListEvaluations', compact('candidatocreate'));
+    public function editar(CandidatoCreateModels $candidato){
+        return view('components.expediente',compact('candidato'));
     }
 
+    public function actualizar(CandidatoRequest $request , CandidatoCreateModels $candidato){
+        $candidato -> update($request -> all());
+        return redirect()->route('candidato.lista', $candidato)->with('success','Candidato Editado');
+        }
+        public function cita()
+        {
+            return view('components.prueba');
+        }
 }

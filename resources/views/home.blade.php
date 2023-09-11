@@ -24,11 +24,7 @@
             @endauth
 
             {{-- para los que no están autenticados --}}
-            @guest
-                <div class="text-center mt-5">
-                    <p>Para poder registrarse, debe iniciar sesión <a href="/login">aquí</a></p>
-                </div>
-            @endguest
+           
         </div>
     </div>
 

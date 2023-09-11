@@ -10,4 +10,6 @@ class CandidatoCreateModels extends Model
     use HasFactory;
 
     protected $table = "candidatocreate";
+
+    protected $guarded = [];
 }

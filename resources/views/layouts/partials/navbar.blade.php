@@ -43,7 +43,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/">Agendar entrevista</a>
+                                <a class="nav-link active" aria-current="page" href="{{ route('candidato.prueba') }}">Agendar entrevista</a>
                             </li>
                         </ul>
                         <ul class="navbar-nav">

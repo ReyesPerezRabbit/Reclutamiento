@@ -20,10 +20,17 @@
     <main>
         <div>
             @yield('content')
+            @guest
+                <div class="text-center">
+                    <p class="mt-4">Para poder registrarse, debe iniciar sesión <a href="/login">aquí</a></p>
+                </div>
+            @endguest
         </div>
     </main>
 
     <!-- Bootstrap JavaScript Libraries -->
+    <script src="{{ asset('assets/js/') }}"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
     </script>
