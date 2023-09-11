@@ -29,18 +29,20 @@
 
     <main>
 
-        <div class="text-center">
+        <div>
             {{-- Para los que ya esten Logeados --}}
             @auth
                 @yield('content')
             @endauth
+        </div>
 
-            {{-- Para los que no esten Logeados --}}
-            @guest
-                <div class="text-center mt-5">
-                    <p>Para poder registrarse, debe iniciar sesión <a href="/login">aquí</a></p>
-                </div>
-            @endguest
+
+        {{-- Para los que no esten Logeados --}}
+        @guest
+            <div class="text-center mt-5">
+                <p>Para poder registrarse, debe iniciar sesión <a href="/login">aquí</a></p>
+            </div>
+        @endguest
     </main>
 
     <!-- Bootstrap JavaScript Libraries -->
