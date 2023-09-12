@@ -3,26 +3,29 @@
 @section('title', 'Lista de Evaluacion')
 
 @section('content')
-
-
     <section>
         @include('layouts.partials.menssage')
 
-        <div style="display: flex; justify-content: center; align-items: center;">
-            <h1 style="margin-right: 20px; margin-bottom: 0;">Lista de Evaluación</h1>
-            <a type="button" class="btn btn-info" href="{{ route('candidato.guardar') }}" style="margin-left: 20px;">Agregar Candidato</a>
+        <div class="mt-3" style="display: flex; justify-content: center; align-items: center;">
+            <h1 style="margin-right: 60px; margin-bottom: 0;">Lista de Evaluación</h1>
+            <a type="button" class="btn btn-info" href="{{ route('candidato.guardar') }}" style="margin-left: 30px;">Agregar
+                Candidato</a>
+            <div class="input-group input-group-sm mt-2 mx-auto" style="max-width: 350px;">
+                <input type="text" class="form-control form-control-sm" placeholder="Buscar candidato ....">
+                <button class="btn btn-outline-secondary btn-sm" type="button">Buscar</button>
+            </div>
+
         </div>
 
-        <div class="input-group input-group-sm mt-3 mx-auto" style="max-width: 350px;">
+        {{-- <div class="input-group input-group-sm mt-3 mx-auto" style="max-width: 350px;">
             <input type="text" class="form-control form-control-sm" placeholder="Buscar candidato ....">
             <button class="btn btn-outline-secondary btn-sm" type="button">Buscar</button>
-        </div>
+        </div> --}}
 
-        <div class="table-scroll text-center w-auto p-3 h-100 d-inline-block mt-3 ">
+        <div class="table-scroll text-center w-auto p-3 h-100 d-inline-block mt-3">
             <table id="miTabla" class="table table-responsive table-bordered mt-4 table-scroll table-tall table-extended">
                 <thead>
                     <tr>
-
                         <th>#</th>
                         <th>Nombre</th>
                         <th>Apellido Paterno</th>
@@ -33,7 +36,7 @@
                         <th>Fecha de registro</th>
                         <th>Edad</th>
                         <th>Domicilio</th>
-                        <th>Fecha de envio de evaluacion</th>
+                        <th>Fecha de envío de evaluación</th>
                         <th>Notas</th>
                         <th>CV</th>
                         <th>Expediente</th>
@@ -47,7 +50,6 @@
                     @foreach ($candidatocreate as $listas)
                         <tr>
                             <th scope="row">{{ $counter++ }}</th>
-
                             <td>{{ $listas->name }}</td>
                             <td>{{ $listas->apellidoP }}</td>
                             <td>{{ $listas->apellidoM }}</td>
@@ -63,13 +65,14 @@
                             <td>
                                 <a href="{{ route('candidato.editar', $listas->id) }}" class="boton-carpeta">
                                     <span class="carpeta-icono">&#128193;</span>
-
                                 </a>
                             </td>
+
                         </tr>
                     @endforeach
                 </tbody>
             </table>
+            {{ $candidatocreate->links() }}
         </div>
     </section>
 @endsection

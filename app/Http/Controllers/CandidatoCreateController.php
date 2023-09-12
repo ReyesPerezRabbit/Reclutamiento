@@ -15,9 +15,10 @@ class CandidatoCreateController extends Controller
     }
     public function lista()
     {
-        $candidatocreate = CandidatoCreateModels :: orderBy('name', 'asc')->paginate();
-        return view('components.ListEvaluations',compact('candidatocreate'));
+        $candidatocreate = CandidatoCreateModels::orderBy('name', 'asc')->simplePaginate(10);
+        return view('components.ListEvaluations', compact('candidatocreate'));
     }
+
 
     public function guardar(Request $request)
     {
@@ -43,19 +44,21 @@ class CandidatoCreateController extends Controller
         $candidato->cv = $request->cv;
 
         $candidato->save();
-        return redirect()->route('candidato.lista')->with('success','Candidato creado') ;
+        return redirect()->route('candidato.lista')->with('success', 'Candidato creado');
     }
 
-    public function editar(CandidatoCreateModels $candidato){
-        return view('components.expediente',compact('candidato'));
+    public function editar(CandidatoCreateModels $candidato)
+    {
+        return view('components.expediente', compact('candidato'));
     }
 
-    public function actualizar(CandidatoRequest $request , CandidatoCreateModels $candidato){
-        $candidato -> update($request -> all());
-        return redirect()->route('candidato.lista', $candidato)->with('success','Candidato Editado');
-        }
-        public function cita()
-        {
-            return view('components.prueba');
-        }
+    public function actualizar(CandidatoRequest $request, CandidatoCreateModels $candidato)
+    {
+        $candidato->update($request->all());
+        return redirect()->route('candidato.lista', $candidato)->with('success', 'Candidato Editado');
+    }
+    public function cita()
+    {
+        return view('components.prueba');
+    }
 }
