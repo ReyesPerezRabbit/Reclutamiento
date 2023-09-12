@@ -39,7 +39,7 @@
                         <th>Fecha de envío de evaluación</th>
                         <th>Notas</th>
                         <th>CV</th>
-                        <th>Expediente</th>
+                        {{-- <th>Expediente</th> --}}
                     </tr>
                 </thead>
                 <tbody>
@@ -62,11 +62,11 @@
                             <td>{{ $listas->fecha_evaluacion }}</td>
                             <td>{{ $listas->nota }}</td>
                             <td>{{ $listas->cv }}</td>
-                            <td>
+                            {{-- <td>
                                 <a href="{{ route('candidato.editar', $listas->id) }}" class="boton-carpeta">
                                     <span class="carpeta-icono">&#128193;</span>
                                 </a>
-                            </td>
+                            </td> --}}
 
                         </tr>
                     @endforeach
