@@ -6,13 +6,18 @@
     <section>
         @include('layouts.partials.menssage')
 
-        <div class="mt-3" style="display: flex; justify-content: center; align-items: center;">
-            <h1 style="margin-right: 60px; margin-bottom: 0;">Lista de Evaluación</h1>
-            <a type="button" class="btn btn-info" href="{{ route('candidato.guardar') }}" style="margin-left: 30px;">Agregar
-                Candidato</a>
-            <div class="input-group input-group-sm mt-2 mx-auto" style="max-width: 350px;">
-                <input type="text" class="form-control form-control-sm" placeholder="Buscar candidato ....">
-                <button class="btn btn-outline-secondary btn-sm" type="button">Buscar</button>
+        <div class="container">
+            <div class="row align-items-start">
+                <div class="mt-3" style="display: flex; justify-content: center; align-items: center;">
+                    <h1 style="margin-right: 60px; margin-bottom: 0;">Lista de Evaluación</h1>
+                    <a type="button" class="btn btn-info" href="{{ route('candidato.guardar') }}"
+                        style="margin-left: 30px;">Agregar
+                        Candidato</a>
+                    <div class="input-group input-group-sm mt-2 mx-auto" style="max-width: 350px;">
+                        <input type="text" class="form-control form-control-sm" placeholder="Buscar candidato ....">
+                        <button class="btn btn-outline-secondary btn-sm" type="button">Buscar</button>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -72,7 +77,9 @@
                     @endforeach
                 </tbody>
             </table>
+          <div class="pagination-sm">
             {{ $candidatocreate->links() }}
+          </div>
         </div>
     </section>
 @endsection
