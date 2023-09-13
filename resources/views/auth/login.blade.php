@@ -35,7 +35,7 @@
                                         <form action="/login" method="post">
                                             @csrf
 
-                                            @include('layouts.partials.menssage')
+                                            @include('partials.menssage')
 
                                             <div class="form-outline mb-4">
                                                 <label class="form-label" for="form2Example11">Usuario o Correo</label>

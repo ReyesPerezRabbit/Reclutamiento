@@ -51,5 +51,5 @@ Route::controller(CandidatoCreateController::class)->group(function () {
 
     Route::put('Expediente/{candidato}', 'actualizar')->name('candidato.actualizar');;
 
-    Route::get('prueba', 'cita')->name('candidato.prueba');
+    Route::get('Entrevista', 'cita')->name('candidato.entravista');
 });

@@ -28,7 +28,7 @@
                                 <form action="/register" method="POST">
                                     @csrf
 
-                                    @include('layouts.partials.menssage')
+                                    @include('partials.menssage')
 
                                     <h2 class="text-uppercase text-center mb-5">Crear cuenta</h2>
 

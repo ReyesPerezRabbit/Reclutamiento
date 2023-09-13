@@ -4,7 +4,7 @@
 
 @section('content')
     <section>
-        @include('layouts.partials.menssage')
+        @include('partials.menssage')
 
         <div class="container">
             <div class="row align-items-start">
@@ -42,9 +42,9 @@
                         <th>Edad</th>
                         <th>Domicilio</th>
                         <th>Fecha de envío de evaluación</th>
-                        <th>Notas</th>
+                        <th>Observaciones</th>
                         <th>CV</th>
-                        {{-- <th>Expediente</th> --}}
+                        <th>Expediente</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -56,22 +56,25 @@
                         <tr>
                             <th scope="row">{{ $counter++ }}</th>
                             <td>{{ $listas->name }}</td>
-                            <td>{{ $listas->apellidoP }}</td>
-                            <td>{{ $listas->apellidoM }}</td>
-                            <td>{{ $listas->estado_civil }}</td>
-                            <td>{{ $listas->estatus }}</td>
+                            <td>{{ $listas->apellidoPaterno }}</td>
+                            <td>{{ $listas->apellidoMaterno }}</td>
+                            <td>{{ $listas->estadoCivil }}</td>
+                            <td>{{ $listas->status }}</td>
                             <td>{{ $listas->vacante }}</td>
-                            <td>{{ $listas->fecha_registro }}</td>
-                            <td>{{ $listas->year }}</td>
+                            <td>{{ $listas->fechaRegistro }}</td>
+                            <td>{{ $listas->years}}</td>
                             <td>{{ $listas->domicilio }}</td>
-                            <td>{{ $listas->fecha_evaluacion }}</td>
-                            <td>{{ $listas->nota }}</td>
+                            <td>{{ $listas->fechaEnvioEvaluacion }}</td>
+                            <td>{{ $listas->observaciones }}</td>
                             <td>{{ $listas->cv }}</td>
-                            {{-- <td>
+                            <td>
                                 <a href="{{ route('candidato.editar', $listas->id) }}" class="boton-carpeta">
                                     <span class="carpeta-icono">&#128193;</span>
                                 </a>
-                            </td> --}}
+                                {{-- <a href="" class="boton-carpeta">
+                                    <span class="carpeta-icono">&#128193;</span>
+                                </a> --}}
+                            </td>
 
                         </tr>
                     @endforeach

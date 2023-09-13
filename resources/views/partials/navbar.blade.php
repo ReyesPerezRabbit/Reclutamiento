@@ -42,9 +42,9 @@
                                 <a class="nav-link active" aria-current="page" href="{{ route('candidato.mostrar') }}">Añadir candidatos</a>
                             </li>
 
-                            {{-- <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="{{ route('candidato.prueba') }}">Agendar entrevista</a>
-                            </li> --}}
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="{{ route('candidato.entravista') }}">Agendar entrevista</a>
+                            </li>
                         </ul>
                         <ul class="navbar-nav">
                             <li class="nav-item dropdown">

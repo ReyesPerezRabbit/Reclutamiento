@@ -15,7 +15,7 @@
 
 <body>
 
-    @include('layouts.partials.navbar')
+    @include('partials.navbar')
 
     <main>
 
