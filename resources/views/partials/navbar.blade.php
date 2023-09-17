@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="d-flex justify-content-center align-items-center vh-10">
+    <div class="d-flex justify-content-center align-items-center vh-10 mt-3">
         @auth
         <div class="justify-center">
             <nav class="navbar navbar-expand-lg bg-info-subtle">
@@ -35,15 +35,15 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/">Lista de evaluacion</a>
+                                <a class="nav-link active" aria-current="page" href="{{ route('candidato.lista') }}">Lista de evaluacion</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/">Datos candidatos</a>
+                                <a class="nav-link active" aria-current="page" href="{{ route('candidato.mostrar') }}">Añadir candidatos</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/">Agendar entrevista</a>
+                                <a class="nav-link active" aria-current="page" href="{{ route('candidato.entravista') }}">Agendar entrevista</a>
                             </li>
                         </ul>
                         <ul class="navbar-nav">

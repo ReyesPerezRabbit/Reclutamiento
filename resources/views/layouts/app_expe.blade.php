@@ -1,3 +1,13 @@
+{{-- debe de llavar en las que vallas a poner
+
+@extends('layouts.app_master')
+
+@section('title', 'Crear Candidatos')
+
+@section('content') --}}
+
+
+
 <!doctype html>
 <html lang="en">
 
@@ -7,24 +17,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS v5.3.1 -->
-    <link rel="stylesheet" href="{{ asset('assets/css/master.css') }}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link rel="stylesheet" href="{{ asset('assets/css/') }}">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
 </head>
 
 <body>
 
-    @include('partials.navbar')
-
     <main>
 
-        <div class="text-center">
+        <div>
             {{-- Para los que ya esten Logeados --}}
             @auth
                 @yield('content')
             @endauth
         </div>
+
 
         {{-- Para los que no esten Logeados --}}
         @guest
@@ -37,13 +48,12 @@
     <!-- Bootstrap JavaScript Libraries -->
     <script src="{{ asset('assets/js/') }}"></script>
 
-
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
     </script>
 </body>
 
