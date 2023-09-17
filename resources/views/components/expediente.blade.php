@@ -12,36 +12,6 @@
             @method('put')
             {{-- FORMULARIO --}}
 
-            <div class="mb-3">
-                <label class="form-label">Vacante</label>
-                <select class="form-select" name="vacante" required>
-                    <option value="" disabled selected>Seleccione la vacante</option>
-                    <option value="Gerente" {{ old('vacante', $candidato->vacante) === 'Gerente' ? 'selected' : '' }}>
-                        Gerente</option>
-                    <option value="PMO" {{ old('vacante', $candidato->vacante) === 'PMO' ? 'selected' : '' }}>PMO
-                    </option>
-                    <option value="Desarrollador"
-                        {{ old('vacante', $candidato->vacante) === 'Desarrollador' ? 'selected' : '' }}>Desarrollador
-                    </option>
-                    <option value="DBA" {{ old('vacante', $candidato->vacante) === 'DBA' ? 'selected' : '' }}>DBA
-                    </option>
-                    <option value="Diseñador UI/UX"
-                        {{ old('vacante', $candidato->vacante) === 'Diseñador UI/UX' ? 'selected' : '' }}>Diseñador UI/UX
-                    </option>
-                    <option value="Contador" {{ old('vacante', $candidato->vacante) === 'Contador' ? 'selected' : '' }}>
-                        Contador</option>
-                    <option value="Operador" {{ old('vacante', $candidato->vacante) === 'Operador' ? 'selected' : '' }}>
-                        Operador</option>
-                    <option value="Otro" {{ old('vacante', $candidato->vacante) === 'Otro' ? 'selected' : '' }}>Otro
-                    </option>
-                </select>
-            </div>
-
-            <div class="mb-3">
-                <label class="form-label">Fotografía (PDF o .doc)</label>
-                <input type="file" class="form-control" name="fotografia" accept=".pdf,.doc" required>
-            </div>
-
             <div class="row">
                 <div class="col-md-6 mb-3">
                     <label class="form-label">Nombre</label>
@@ -68,14 +38,46 @@
                 </div>
             </div>
 
+            <div class="mb-3">
+                <label class="form-label">Vacante</label>
+                <select class="form-select" name="vacante" required>
+                    <option value="" disabled selected>Seleccione la vacante</option>
+                    <option value="Gerente" {{ old('vacante', $candidato->vacante) === 'Gerente' ? 'selected' : '' }}>
+                        Gerente</option>
+                    <option value="PMO" {{ old('vacante', $candidato->vacante) === 'PMO' ? 'selected' : '' }}>PMO
+                    </option>
+                    <option value="Desarrollador"
+                        {{ old('vacante', $candidato->vacante) === 'Desarrollador' ? 'selected' : '' }}>Desarrollador
+                    </option>
+                    <option value="DBA" {{ old('vacante', $candidato->vacante) === 'DBA' ? 'selected' : '' }}>DBA
+                    </option>
+                    <option value="Diseñador UI/UX"
+                        {{ old('vacante', $candidato->vacante) === 'Diseñador UI/UX' ? 'selected' : '' }}>Diseñador UI/UX
+                    </option>
+                    <option value="Contador" {{ old('vacante', $candidato->vacante) === 'Contador' ? 'selected' : '' }}>
+                        Contador</option>
+                    <option value="Operador" {{ old('vacante', $candidato->vacante) === 'Operador' ? 'selected' : '' }}>
+                        Operador</option>
+                    <option value="Otro" {{ old('vacante', $candidato->vacante) === 'Otro' ? 'selected' : '' }}>Otro
+                    </option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Fotografía</label>
+                <input type="file" class="form-control" name="fotografia" accept=".jpg,.png" required>
+            </div>
+
             <div class="row">
                 <div class="col-md-4 mb-3">
                     <label class="form-label">Fecha de Registro</label>
-                    <input type="date" class="form-control" name="fechaRegistro" value="{{ old('fechaRegistro', $candidato->fechaRegistro) }}" required>
+                    <input type="date" class="form-control" name="fechaRegistro"
+                        value="{{ old('fechaRegistro', $candidato->fechaRegistro) }}" required>
                 </div>
                 <div class="col-md-4 mb-3">
                     <label class="form-label">Fecha de Envío de Evaluación</label>
-                    <input type="date" class="form-control" name="fechaEnvioEvaluacion" value="{{ old('fechaEnvioEvaluacion', $candidato->fechaEnvioEvaluacion) }}">
+                    <input type="date" class="form-control" name="fechaEnvioEvaluacion"
+                        value="{{ old('fechaEnvioEvaluacion', $candidato->fechaEnvioEvaluacion) }}">
                 </div>
                 <div class="col-md-4 mb-3">
                     <label class="form-label">Fecha de Nacimiento</label>
@@ -220,9 +222,9 @@
                 <label class="form-label">CV (PDF o .doc)</label>
                 <input type="file" class="form-control" name="cv" accept=".pdf,.doc">
             </div>
-           <div class="text-center mt-3">
-            <button type="submit" class="btn btn-primary">Confirmar Registro</button>
-           </div>
+            <div class="text-center mt-3">
+                <button type="submit" class="btn btn-primary">Confirmar Registro</button>
+            </div>
         </form>
     </div>
 @endsection

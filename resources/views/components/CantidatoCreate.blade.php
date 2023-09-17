@@ -117,7 +117,7 @@
                             <div class="col-md-12">
                                 <div class="mb-3">
                                     <label class="form-label">CV (PDF o .doc)</label>
-                                    <input type="file" class="form-control" name="cv">
+                                    <input type="file" class="form-control" name="cv" accept=".pdf,.doc" required>
                                 </div>
                             </div>
                         </div>
