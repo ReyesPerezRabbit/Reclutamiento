@@ -54,6 +54,7 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Perfil</a></li>
+                                    <li><a class="dropdown-item" href="/register">Añadir administradores</a></li>
                                     <li><a class="dropdown-item" href="/logout">Cerrar sesion</a></li>
                                 </ul>
                             </li>
