@@ -8,7 +8,7 @@
             <div class="col-md-8 mt-5">
                 <div class="shadow p-4 rounded bg-light">
 
-                    <form action="{{ route('candidato.guardar') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('candidato.guardar') }}" method="POST">
                         @csrf
                         <h1 class="mb-4 text-center">Registro de Candidatos</h1>
                         <div class="row">
@@ -113,20 +113,14 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="mb-3">
                                     <label class="form-label">CV (PDF o .doc)</label>
-                                    <input type="file" class="form-control" name="cv" accept=".pdf,.doc">
+                                    <input type="file" class="form-control" name="cv" accept=".pdf,.doc" required>
                                 </div>
-
-                                @if ($errors->has('cv'))
-                                <div class="alert alert-danger">{{ $errors->first('cv') }}</div>
-                                @endif
                             </div>
                         </div>
-                        
                         <button type="submit" class="btn btn-primary mt-4">Guardar</button>
                     </form>
                 </div>
