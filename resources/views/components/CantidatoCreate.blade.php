@@ -39,10 +39,10 @@
                                 <label class="form-label">Estado Civil</label>
                                 <select class="form-select" name="estadoCivil" required>
                                     <option value="" disabled selected>Selecciona una opción</option>
-                                    <option value="casado">Casado</option>
-                                    <option value="viudo">Viudo</option>
-                                    <option value="soltero">Soltero</option>
-                                    <option value="divorciado">Divorciado</option>
+                                    <option value="Casado">Casado</option>
+                                    <option value="vViudo">Viudo</option>
+                                    <option value="Soltero">Soltero</option>
+                                    <option value="Divorciado">Divorciado</option>
                                 </select>
                             </div>
                         </div>
@@ -52,7 +52,7 @@
                                 <select class="form-select" name="status" required>
                                     <option value="" disabled selected>Selecciona una opción</option>
                                     <option value="Entrevistado">Entrevistado</option>
-                                    <option value="Evaluación">Evaluación</option>
+                                    <option value="Evaluacion">Evaluación</option>
                                     <option value="Contratado">Contratado</option>
                                     <option value="En espera">En espera</option>
                                     <option value="Rechazado">Rechazado</option>
