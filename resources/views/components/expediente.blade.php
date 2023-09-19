@@ -13,16 +13,19 @@
             {{-- FORMULARIO --}}
 
             <div class="row">
+
                 <div class="col-md-6 mb-3">
                     <label class="form-label">Nombre</label>
                     <input type="text" class="form-control" name="name" value="{{ old('name', $candidato->name) }}"
                         required>
                 </div>
+
                 <div class="col-md-6 mb-3">
                     <label class="form-label">Edad</label>
                     <input type="text" class="form-control" name="years" value="{{ old('years', $candidato->years) }}"
                         required>
                 </div>
+
             </div>
 
             <div class="row">
@@ -65,7 +68,8 @@
 
             <div class="mb-3">
                 <label class="form-label">Fotografía</label>
-                <input type="file" class="form-control" name="fotografia" accept=".jpg,.png" required>
+                <input type="file" class="form-control" name="fotografia" accept=".jpg,.png" required
+                    value="{{ old('fotografia') }}">
             </div>
 
             <div class="row">
@@ -81,7 +85,8 @@
                 </div>
                 <div class="col-md-4 mb-3">
                     <label class="form-label">Fecha de Nacimiento</label>
-                    <input type="date" class="form-control" name="fechaNacimiento">
+                    <input type="date" class="form-control" name="fechaNacimiento"
+                        value="{{ old('fechaNacimiento', $candidato->fechaNacimiento) }}">
                 </div>
             </div>
 
@@ -89,11 +94,14 @@
                 <div class="col-md-4 mb-3">
                     <label class="form-label">Sexo</label>
                     <select class="form-select" name="sexo" required>
-                        <option value="" disabled selected>Seleccione el genero</option>
-                        <option value="Masculino">Masculino</option>
-                        <option value="Femenino">Femenino</option>
+                        <option value="" disabled selected>Seleccione el género</option>
+                        <option value="Masculino" {{ old('sexo', $candidato->sexo) === 'Masculino' ? 'selected' : '' }}>
+                            Masculino</option>
+                        <option value="Femenino" {{ old('sexo', $candidato->sexo) === 'Femenino' ? 'selected' : '' }}>
+                            Femenino</option>
                     </select>
                 </div>
+
                 <div class="col-md-4 mb-3">
                     <label class="form-label">Estado Civil</label>
                     <select name="estadoCivil" class="form-select">
@@ -116,9 +124,11 @@
                             Viudo</option>
                     </select>
                 </div>
+
                 <div class="col-md-4 mb-3">
                     <label class="form-label">Teléfono</label>
-                    <input type="tel" class="form-control" name="telefono" required>
+                    <input type="tel" class="form-control" name="telefono"
+                        value="{{ old('telefono', $candidato->telefono) }}" required>
                 </div>
             </div>
 
@@ -128,15 +138,18 @@
                     <input type="text" class="form-control" name="domicilio"
                         value="{{ old('domicilio', $candidato->domicilio) }}" required>
                 </div>
+
                 <div class="col-md-6 mb-3">
                     <label class="form-label">Correo Personal</label>
-                    <input type="email" class="form-control" name="correoPersonal" required>
+                    <input type="email" class="form-control" name="correoPersonal"
+                        value="{{ old('correoPersonal', $candidato->correoPersonal) }}" required>
                 </div>
+
             </div>
 
             <div class="mb-3">
                 <label class="form-label">Condiciones Médicas Específicas</label>
-                <textarea class="form-control" name="condicionesMedicas" rows="4"></textarea>
+                <textarea class="form-control" name="condicionesMedicas" rows="4">{{ old('condicionesMedicas', $candidato->condicionesMedicas) }}</textarea>
             </div>
 
             <div class="row">
@@ -149,26 +162,40 @@
                 <div class="col-md-5 mb-3">
                     <label class="form-label">IQ</label>
                     <select class="form-select" name="iq" required>
-                        <option value="" disabled selected>Selecciona una opcion</option>
-                        <option value="Menos de 70 puntos">Menos de 70 puntos: bajo rendimiento</option>
-                        <option value="Entre 70 y 79 puntos">Entre 70 y 79 puntos: inteligencia limítrofe</option>
-                        <option value="Entre 80 y 89 puntos">Entre 80 y 89 puntos: Bajo</option>
-                        <option value="Entre 90 y 109 puntos">Entre 90 y 109 puntos: Promedio normal</option>
-                        <option value="Entre 110 y 119 puntos">Entre 110 y 119 puntos: Alto</option>
-                        <option value="Entre 120 y 129 puntos">Entre 120 y 129 puntos: inteligencia superior al promedio
-                        </option>
-                        <option value="Más de 130 puntos">Más de 130 puntos: inteligencia muy superior al promedio</option>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="Menos de 70 puntos"
+                            {{ old('iq', $candidato->iq) === 'Menos de 70 puntos' ? 'selected' : '' }}>Menos de 70 puntos:
+                            bajo rendimiento</option>
+                        <option value="Entre 70 y 79 puntos"
+                            {{ old('iq', $candidato->iq) === 'Entre 70 y 79 puntos' ? 'selected' : '' }}>Entre 70 y 79
+                            puntos: inteligencia limítrofe</option>
+                        <option value="Entre 80 y 89 puntos"
+                            {{ old('iq', $candidato->iq) === 'Entre 80 y 89 puntos' ? 'selected' : '' }}>Entre 80 y 89
+                            puntos: Bajo</option>
+                        <option value="Entre 90 y 109 puntos"
+                            {{ old('iq', $candidato->iq) === 'Entre 90 y 109 puntos' ? 'selected' : '' }}>Entre 90 y 109
+                            puntos: Promedio normal</option>
+                        <option value="Entre 110 y 119 puntos"
+                            {{ old('iq', $candidato->iq) === 'Entre 110 y 119 puntos' ? 'selected' : '' }}>Entre 110 y 119
+                            puntos: Alto</option>
+                        <option value="Entre 120 y 129 puntos"
+                            {{ old('iq', $candidato->iq) === 'Entre 120 y 129 puntos' ? 'selected' : '' }}>Entre 120 y 129
+                            puntos: inteligencia superior al promedio</option>
+                        <option value="Más de 130 puntos"
+                            {{ old('iq', $candidato->iq) === 'Más de 130 puntos' ? 'selected' : '' }}>Más de 130 puntos:
+                            inteligencia muy superior al promedio</option>
                     </select>
                 </div>
 
                 <div class="col-md-3 mb-3">
                     <label class="form-label">Resultados Evaluación Técnica (x%)</label>
                     <input type="number" class="form-control" name="resultadosEvaluacion" min="0"
-                        max="100">
+                        max="100" value="{{ old('resultadosEvaluacion', $candidato->resultadosEvaluacion) }}">
                 </div>
             </div>
 
             <div class="row">
+
                 <div class="col-md-6 mb-3">
                     <label class="form-label">Status</label>
                     <select class="form-select" name="status" required>
@@ -194,37 +221,76 @@
                         </option>
                     </select>
                 </div>
+
                 <div class="col-md-6 mb-3">
                     <label class="form-label">Conocimientos</label>
                     <select class="form-select" name="conocimientos">
                         <option value="" disabled selected>Selecciona una opción</option>
-                        <option value="Laravel">Laravel</option>
-                        <option value="PHP">PHP</option>
-                        <option value="React">React</option>
-                        <option value="Angular">Angular</option>
-                        <option value="Symfony">Symfony</option>
-                        <option value="Django">Django</option>
-                        <option value="Phalcon">Phalcon</option>
-                        <option value="Spring">Spring</option>
-                        <option value="Express JS">Express JS</option>
-                        <option value="Struts">Struts</option>
-                        <option value="Zend">Zend</option>
-                        <option value="Java">Java</option>
-                        <option value="Figma">Figma</option>
-                        <option value="Smartsheet">Smartsheet</option>
-                        <option value="Scrum">Scrum</option>
-                        <option value="Otro">Otro</option>
+                        <option value="Laravel"
+                            {{ old('conocimientos', $candidato->conocimientos) === 'Laravel' ? 'selected' : '' }}>Laravel
+                        </option>
+                        <option value="PHP"
+                            {{ old('conocimientos', $candidato->conocimientos) === 'PHP' ? 'selected' : '' }}>PHP</option>
+                        <option value="React"
+                            {{ old('conocimientos', $candidato->conocimientos) === 'React' ? 'selected' : '' }}>React
+                        </option>
+                        <option value="Angular"
+                            {{ old('conocimientos', $candidato->conocimientos) === 'Angular' ? 'selected' : '' }}>Angular
+                        </option>
+                        <option value="Symfony"
+                            {{ old('conocimientos', $candidato->conocimientos) === 'Symfony' ? 'selected' : '' }}>Symfony
+                        </option>
+                        <option value="Django"
+                            {{ old('conocimientos', $candidato->conocimientos) === 'Django' ? 'selected' : '' }}>Django
+                        </option>
+                        <option value="Phalcon"
+                            {{ old('conocimientos', $candidato->conocimientos) === 'Phalcon' ? 'selected' : '' }}>Phalcon
+                        </option>
+                        <option value="Spring"
+                            {{ old('conocimientos', $candidato->conocimientos) === 'Spring' ? 'selected' : '' }}>Spring
+                        </option>
+                        <option value="Express JS"
+                            {{ old('conocimientos', $candidato->conocimientos) === 'Express JS' ? 'selected' : '' }}>
+                            Express JS</option>
+                        <option value="Struts"
+                            {{ old('conocimientos', $candidato->conocimientos) === 'Struts' ? 'selected' : '' }}>Struts
+                        </option>
+                        <option value="Zend"
+                            {{ old('conocimientos', $candidato->conocimientos) === 'Zend' ? 'selected' : '' }}>Zend
+                        </option>
+                        <option value="Java"
+                            {{ old('conocimientos', $candidato->conocimientos) === 'Java' ? 'selected' : '' }}>Java
+                        </option>
+                        <option value="Figma"
+                            {{ old('conocimientos', $candidato->conocimientos) === 'Figma' ? 'selected' : '' }}>Figma
+                        </option>
+                        <option value="Smartsheet"
+                            {{ old('conocimientos', $candidato->conocimientos) === 'Smartsheet' ? 'selected' : '' }}>
+                            Smartsheet</option>
+                        <option value="Scrum"
+                            {{ old('conocimientos', $candidato->conocimientos) === 'Scrum' ? 'selected' : '' }}>Scrum
+                        </option>
+                        <option value="Otro"
+                            {{ old('conocimientos', $candidato->conocimientos) === 'Otro' ? 'selected' : '' }}>Otro
+                        </option>
                     </select>
                 </div>
+
             </div>
 
             <div class="mb-3">
                 <label class="form-label">CV (PDF o .doc)</label>
-                <input type="file" class="form-control" name="cv" accept=".pdf,.doc">
+                <input type="file" class="form-control @error('cv') is-invalid @enderror" name="cv"
+                    accept=".pdf,.doc">
+                @error('cv')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
             </div>
+
             <div class="text-center mt-3">
                 <button type="submit" class="btn btn-primary">Confirmar Registro</button>
             </div>
+
         </form>
     </div>
 @endsection
