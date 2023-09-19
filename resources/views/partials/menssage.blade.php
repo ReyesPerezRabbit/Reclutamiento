@@ -8,8 +8,10 @@
     </div>
 @endif
 
-@if (Session::get('success', false))
-    <?php $data = Session::get('success'); ?>
+@if (Session::has('success'))
+    @php
+        $data = Session::get('success');
+    @endphp
 
     @if (is_array($data))
         @foreach ($data as $message)
@@ -18,7 +20,7 @@
                 {{ $message }}
             </div>
         @endforeach
-        @else
+    @else
         <div class="alert alert-success">
             <i class="fa fa-check"></i>
             {{ $data }}
