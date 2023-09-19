@@ -28,16 +28,11 @@
 <body>
 
     <main>
-
-        <div>
-            {{-- Para los que ya esten Logeados --}}
-            @auth
+        @auth
+            <div class="container">
                 @yield('content')
-            @endauth
-        </div>
-
-
-        {{-- Para los que no esten Logeados --}}
+            </div>
+        @endauth
         @guest
             <div class="text-center mt-5">
                 <p>Para poder registrarse, debe iniciar sesión <a href="/login">aquí</a></p>
