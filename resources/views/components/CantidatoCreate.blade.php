@@ -7,7 +7,7 @@
     <div class="row justify-content-center align-items-center mt-5">
         <div class="col-md-8">
             <div class="shadow p-4 rounded bg-light">
-                <form action="{{ route('candidato.guardar') }}" method="POST">
+                <form action="{{ route('candidato.guardar') }}" method="POST" >
                     @csrf
                     <h1 class="mb-4 text-center">Registro de Candidatos</h1>
                     <div class="row">
@@ -40,7 +40,7 @@
                                 <select class="form-select" name="estadoCivil" required>
                                     <option value="" disabled selected>Selecciona una opción</option>
                                     <option value="Casado">Casado</option>
-                                    <option value="vViudo">Viudo</option>
+                                    <option value="Viudo">Viudo</option>
                                     <option value="Soltero">Soltero</option>
                                     <option value="Divorciado">Divorciado</option>
                                 </select>

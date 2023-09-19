@@ -34,6 +34,22 @@ class CandidatoCreateController extends Controller
 
     public function actualizar(CandidatoRequest $request, CandidatoCreateModels $candidato)
     {
+         // Manejar la carga de la imagen
+         if ($request->hasFile('fotografia')) {
+            $imagen = $request->file('fotografia');
+            $nombreImagen = time() . '_' . $imagen->getClientOriginalName();
+
+            // Definir la ubicación donde se guardará la imagen (por ejemplo, en la carpeta 'fotografias')
+            $ubicacion = public_path('fotografias');
+
+            // Mover la imagen al directorio especificado
+            $imagen->move($ubicacion, $nombreImagen);
+
+            // Guardar la ruta de la imagen en el modelo
+            $candidato->fotografia = 'fotografias/' . $nombreImagen;
+            $candidato->save();
+        }
+
         $candidato->update($request->all());
         return redirect()->route('candidato.lista', $candidato)->with('success', 'Candidato Editado');
     }

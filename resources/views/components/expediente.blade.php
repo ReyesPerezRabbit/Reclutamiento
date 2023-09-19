@@ -7,7 +7,7 @@
         <div class="text-center">
             <h1>Expediente de candidato</h1>
         </div>
-        <form action="{{ route('candidato.actualizar', $candidato) }}" method="POST"  >
+        <form action="{{ route('candidato.actualizar', $candidato) }}" method="POST" enctype="multipart/form-data" >
             @csrf
             @method('put')
             {{-- FORMULARIO --}}
@@ -66,18 +66,17 @@
                         </option>
                     </select>
                 </div>
-
                 <div class="col-md-6 mb-3 mt-4">
                     <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="fotografia" name="fotografia" accept=".jpg, .png" required onchange="previewImage(this)">
+                        <input type="file" class="custom-file-input" id="fotografia" name="fotografia"
+                            accept=".jpg, .png" required onchange="previewImage(this)">
                         <label class="custom-file-label" for="fotografia">Seleccionar archivo</label>
                     </div>
                     <div id="file-preview">
-                        <img id="preview-image" src="#" alt="Vista previa de la imagen" style="display: none; max-width: 100%; max-height: 200px;">
+                        <img id="preview-image" src="#" alt="Vista previa de la imagen"
+                            style="display: none; max-width: 100%; max-height: 200px;">
                     </div>
                 </div>
-
-
             </div>
 
 
