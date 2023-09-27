@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\AgendaEntrevistaController;
 use App\Http\Controllers\CandidatoCreateController;
 use App\Http\Controllers\HomeCrontroller;
 use App\Http\Controllers\LoginCrontroller;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
+
 use Illuminate\Support\Facades\Route;
 
 
@@ -51,5 +53,8 @@ Route::controller(CandidatoCreateController::class)->group(function () {
 
     Route::put('Expediente/{candidato}', 'actualizar')->name('candidato.actualizar');;
 
+});
+
+Route::controller(AgendaEntrevistaController::class)->group(function () {
     Route::get('Entrevista', 'cita')->name('candidato.entravista');
 });
