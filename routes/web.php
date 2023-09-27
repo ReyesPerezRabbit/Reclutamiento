@@ -56,5 +56,6 @@ Route::controller(CandidatoCreateController::class)->group(function () {
 });
 
 Route::controller(AgendaEntrevistaController::class)->group(function () {
+
     Route::get('Entrevista', 'cita')->name('candidato.entravista');
 });

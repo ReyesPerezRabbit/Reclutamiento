@@ -53,4 +53,5 @@ class CandidatoCreateController extends Controller
         $candidato->update($request->all());
         return redirect()->route('candidato.lista', $candidato)->with('success', 'Candidato Editado');
     }
+  
 }
