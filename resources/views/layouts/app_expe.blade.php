@@ -46,7 +46,7 @@
     </main>
 
     <!-- Bootstrap JavaScript Libraries -->
-    <script src="{{ asset('assets/js/') }}"></script>
+    <script src="{{ asset('assets/js/expediente.js') }}"></script>
 
 
     <script>
