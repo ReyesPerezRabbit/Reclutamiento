@@ -1,0 +1,37 @@
+/* styles.css */
+
+/* Header and Navbar styles */
+.header {
+    background: linear-gradient(to right, #3cb371, #007bff);
+    color: #fff;
+    padding: 8px 0; /* Reduce top and bottom padding */
+    text-align: center;
+    font-size: 28px; /* Increase the font size */
+    font-style: italic; /* Add italic style */
+    margin-bottom: 5px; /* Reduce bottom margin */
+}
+
+.navbar {
+    background: linear-gradient(to right, #3cb371, #007bff);
+    color: #fff;
+    padding: 8px 0; /* Reduce top and bottom padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px; /* Increase the font size */
+    font-style: italic; /* Add italic style */
+    margin-bottom: 5px; /* Reduce bottom margin */
+}
+
+/* Move the logo to the left */
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo img {
+    width: 150px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Rest of the styles remain the same */

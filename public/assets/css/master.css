@@ -1,3 +1,39 @@
+/* master.css */
+
+/* Añadir espacio en la parte superior e inferior del encabezado */
+.header {
+    margin-bottom: 20px;
+    padding: 20px 0;
+}
+
+/* Estilo del contenedor principal */
+.container-fluid {
+    padding: 20px;
+}
+
+/* Estilo del cuadro de bienvenida */
+.bg-white {
+    background-color: #fff;
+}
+
+/* Estilo del cuadro de bienvenida con sombra */
+.rounded-lg {
+    border-radius: 10px;
+}
+
+.shadow-lg {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Alineación y margen inferior para el texto del cuadro de bienvenida */
 .text-center {
     text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo para el enlace de inicio de sesión */
+.text-center a {
+    color: #007bff;
+    text-decoration: underline;
+    font-weight: bold;
 }

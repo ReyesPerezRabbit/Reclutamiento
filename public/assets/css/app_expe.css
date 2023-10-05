@@ -1,0 +1,20 @@
+    .custom-file-input::-webkit-file-upload-button {
+        visibility: hidden;
+    }
+    .custom-file-input::before {
+        content: 'Subir Fotografía';
+        display: inline-block;
+        background: linear-gradient(to bottom, #f9f9f9, #e3e3e3);
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        padding: 5px 15px;
+        outline: none;
+        white-space: nowrap;
+        cursor: pointer;
+        text-align: center;
+        font-weight: 700;
+    }
+    .custom-file-input:hover::before {
+        border-color: #007bff;
+    }
+

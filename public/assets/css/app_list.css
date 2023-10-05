@@ -1,0 +1,57 @@
+/* styles.css */
+
+/* Header styles */
+.header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+/* Container styles */
+.container {
+    padding: 20px;
+}
+
+/* Search input styles */
+.input-group {
+    margin-top: 10px;
+}
+
+/* Table styles */
+.table-scroll {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th,
+.table td {
+    padding: 8px;
+    text-align: center;
+}
+
+.table th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Pagination styles */
+.pagination {
+    margin-top: 20px;
+    justify-content: center;
+}
+
+/* Add more styles as needed */
