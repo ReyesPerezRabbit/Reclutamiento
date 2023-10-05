@@ -30,7 +30,7 @@
                             <a class="nav-link" href="/">Pagina principal</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('candidato.lista') }}">Lista de evaluación   e la otro pc ta ta</a>
+                            <a class="nav-link" href="{{ route('candidato.lista') }}">Lista de evaluación</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('candidato.mostrar') }}">Añadir candidatos</a>
