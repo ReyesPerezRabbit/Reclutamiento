@@ -53,9 +53,13 @@ Route::controller(CandidatoCreateController::class)->group(function () {
 
     Route::put('Expediente/{candidato}', 'actualizar')->name('candidato.actualizar');;
 
+
 });
 
 Route::controller(AgendaEntrevistaController::class)->group(function () {
 
     Route::get('Entrevista', 'cita')->name('candidato.entravista');
+
+    Route::get('/listar-archivos-s3', 'listarArchivosS3')->name('ruta.listarArchivosS3');
+
 });
