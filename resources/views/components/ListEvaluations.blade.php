@@ -74,29 +74,29 @@
                 </tbody>
             </table>
             <div class="d-flex justify-content-center">
-    <ul class="pagination">
-        <!-- Botón "Anterior" -->
-        <li class="page-item {{ $candidatocreate->previousPageUrl() ? '' : 'disabled' }}">
-            <a class="page-link" href="{{ $candidatocreate->previousPageUrl() }}" aria-label="Anterior">
-                <span aria-hidden="true">&laquo;</span>
-            </a>
-        </li>
+                <ul class="pagination">
+                    <!-- Botón "Anterior" -->
+                    <li class="page-item {{ $candidatocreate->previousPageUrl() ? '' : 'disabled' }}">
+                        <a class="page-link" href="{{ $candidatocreate->previousPageUrl() }}" aria-label="Anterior">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
 
-        <!-- Números de página -->
-        @foreach ($candidatocreate->getUrlRange(1, $candidatocreate->lastPage()) as $page => $url)
-            <li class="page-item {{ $page == $candidatocreate->currentPage() ? 'active' : '' }}">
-                <a class="page-link" href="{{ $url }}">{{ $page }}</a>
-            </li>
-        @endforeach
+                    <!-- Números de página -->
+                    @foreach ($candidatocreate->getUrlRange(1, $candidatocreate->lastPage()) as $page => $url)
+                        <li class="page-item {{ $page == $candidatocreate->currentPage() ? 'active' : '' }}">
+                            <a class="page-link" href="{{ $url }}">{{ $page }}</a>
+                        </li>
+                    @endforeach
 
-        <!-- Botón "Siguiente" -->
-        <li class="page-item {{ $candidatocreate->nextPageUrl() ? '' : 'disabled' }}">
-            <a class="page-link" href="{{ $candidatocreate->nextPageUrl() }}" aria-label="Siguiente">
-                <span aria-hidden="true">&raquo;</span>
-            </a>
-        </li>
-    </ul>
-</div>
+                    <!-- Botón "Siguiente" -->
+                    <li class="page-item {{ $candidatocreate->nextPageUrl() ? '' : 'disabled' }}">
+                        <a class="page-link" href="{{ $candidatocreate->nextPageUrl() }}" aria-label="Siguiente">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
         </div>
     </section>

@@ -15,7 +15,8 @@
 /* Container styles */
 .container {
     padding: 20px;
-    max-width: 100%; /* Hacer que el contenedor sea responsivo */
+    max-width: 100%;
+    /* Hacer que el contenedor sea responsivo */
 }
 
 /* Search input styles */
@@ -59,7 +60,9 @@
 
 /* Responsividad */
 @media (max-width: 768px) {
-    .table th, .table td {
+
+    .table th,
+    .table td {
         padding: 4px;
     }
 
