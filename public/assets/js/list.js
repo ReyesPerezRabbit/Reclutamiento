@@ -25,5 +25,20 @@ document.addEventListener("DOMContentLoaded", function () {
                 fila.style.display = "none";
             }
         }
+
     });
+
 });
+document.getElementById('btnFiltrar').addEventListener('click', function () {
+    // Obtén los valores del formulario
+    var vacante = document.getElementById('filtroVacante').value;
+    var estadoCivil = document.getElementById('estadoCivil').value;
+    console.log(vacante);
+// Finalmente, envía el formulario
+    document.getElementById('miFormulario').submit();
+// Vuelve a pintar los filtros (esto es solo un ejemplo, debes adaptarlo a tus necesidades)
+    document.getElementById('filtroVacante').value = vacante;
+    document.getElementById('estadoCivil').value = estadoCivil;
+    console.log(vacante);
+});
+

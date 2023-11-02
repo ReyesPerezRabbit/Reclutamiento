@@ -5,7 +5,7 @@ body {
 }
 
 nav {
-    background-color: #333;
+    background: linear-gradient(to right, #70CAD2, #4286f4);
     color: #fff;
     display: flex;
     align-items: center;
@@ -15,7 +15,8 @@ nav {
 
 /* Estilos para el logo */
 .logo {
-    max-width: 200px; /* Ajusta el valor de max-width para hacer la imagen más grande */
+    max-width: 200px;
+    /* Ajusta el valor de max-width para hacer la imagen más grande */
 }
 
 /* Estilos para el menú */
@@ -29,9 +30,21 @@ nav {
     color: #fff;
     text-decoration: none;
     margin: 5px;
-    padding: 5px 10px;
-    border: 1px solid #fff;
+    padding: 5px 15px;
+    border: none;
     border-radius: 5px;
+    background-color: #4286f4;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #70CAD2;
+    /* Color de resaltado al pasar el cursor */
+}
+
+/* Estilos para el botón de Cerrar sesión */
+.logout-button {
+    background-color: #f4416f;
 }
 
 /* Estilos para dispositivos pequeños */

@@ -58,8 +58,12 @@ Route::controller(CandidatoCreateController::class)->group(function () {
 
 Route::controller(AgendaEntrevistaController::class)->group(function () {
 
-    Route::get('Entrevista', 'cita')->name('candidato.entravista');
+    Route::get('Entrevista', 'cita')->name('candidato.entrevista');
 
-    Route::get('/listar-archivos-s3', 'listarArchivosS3')->name('ruta.listarArchivosS3');
+    Route::post('/subir-archivo-s3', 'subirArchivoS3')->name('subir.archivo.s3');
+
+    Route::post('/listar-archivos-s3', 'listarArchivosS3')->name('ruta.listarArchivosS3');
+
+    Route::get('/muestra-datos-s3', 'mostrarDatosS3')->name('mostrar.datos.s3');
 
 });
