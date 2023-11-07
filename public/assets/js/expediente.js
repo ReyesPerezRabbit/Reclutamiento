@@ -15,3 +15,23 @@ function mostrarImagen() {
         preview.style.display = 'none';
     }
 }
+
+// Para La foto
+
+function previewImage(input) {
+    var preview = document.getElementById('preview-image');
+    var file = input.files[0];
+
+    if (file) {
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+            preview.src = e.target.result;
+            preview.style.display = 'block';
+        }
+
+        reader.readAsDataURL(file);
+    } else {
+        preview.style.display = 'none';
+    }
+}

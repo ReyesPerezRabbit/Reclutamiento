@@ -1,37 +1,64 @@
-/* styles.css */
-
-/* Header and Navbar styles */
-.header {
-    background: linear-gradient(to right, #3cb371, #007bff);
-    color: #fff;
-    padding: 8px 0; /* Reduce top and bottom padding */
-    text-align: center;
-    font-size: 28px; /* Increase the font size */
-    font-style: italic; /* Add italic style */
-    margin-bottom: 5px; /* Reduce bottom margin */
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
 }
 
-.navbar {
-    background: linear-gradient(to right, #3cb371, #007bff);
+nav {
+    background: linear-gradient(to right, #70CAD2, #4286f4);
     color: #fff;
-    padding: 8px 0; /* Reduce top and bottom padding */
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-    font-size: 22px; /* Increase the font size */
-    font-style: italic; /* Add italic style */
-    margin-bottom: 5px; /* Reduce bottom margin */
+    padding: 10px;
 }
 
-/* Move the logo to the left */
-.navbar-logo {
+/* Estilos para el logo */
+.logo {
+    max-width: 200px;
+    /* Ajusta el valor de max-width para hacer la imagen más grande */
+}
+
+/* Estilos para el menú */
+.menu {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.navbar-logo img {
-    width: 150px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    margin: 5px;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4286f4;
+    transition: background-color 0.3s;
 }
 
-/* Rest of the styles remain the same */
+.menu a:hover {
+    background-color: #70CAD2;
+    /* Color de resaltado al pasar el cursor */
+}
+
+/* Estilos para el botón de Cerrar sesión */
+.logout-button {
+    background-color: #f4416f;
+}
+
+/* Estilos para dispositivos pequeños */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu a {
+        margin: 5px 0;
+    }
+}

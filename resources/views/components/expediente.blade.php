@@ -4,20 +4,35 @@
 
 @section('content')
     <div class="container mt-5">
-        <div class="text-center">
+        <div class="text-center mt-3">
             <h1>Expediente de candidato</h1>
         </div>
         <form action="{{ route('candidato.actualizar', $candidato) }}" method="POST" enctype="multipart/form-data" >
             @csrf
             @method('put')
+
             {{-- FORMULARIO --}}
+
+            <div class="col-md-12 mb-5 mt-5">
+                <div id="file-preview">
+                    <img id="preview-image" src="#" alt="Vista previa de la imagen" style="display: none; max-width: 100%; max-height: 200px;">
+                </div>
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="fotografia" name="fotografia" accept=".jpg, .png" required onchange="previewImage(this)">
+                    <label class="custom-file-label" for="fotografia"></label>
+                </div>
+
+            </div>
+
 
             <div class="row">
                 <div class="col-md-6 mb-3">
                     <label class="form-label">Nombre</label>
                     <input type="text" class="form-control" name="name" value="{{ old('name', $candidato->name) }}"
-                        required>
+                        required oninput="this.value = this.value.toUpperCase()">
                 </div>
+
+
                 <div class="col-md-6 mb-3">
                     <label class="form-label">Edad</label>
                     <input type="text" class="form-control" name="years" value="{{ old('years', $candidato->years) }}"
@@ -28,13 +43,13 @@
             <div class="row">
                 <div class="col-md-6 mb-3">
                     <label class="form-label">Apellido Paterno</label>
-                    <input type="text" class="form-control" name="apellidoPaterno"
-                        value="{{ old('apellidoPaterno', $candidato->apellidoPaterno) }}" required>
+                    <input type="text" class="form-control" name="apellidoPaterno" value="{{ old('apellidoPaterno', $candidato->apellidoPaterno) }}" required oninput="this.value = this.value.toUpperCase()">
                 </div>
+
                 <div class="col-md-6 mb-3">
                     <label class="form-label">Apellido Materno</label>
                     <input type="text" class="form-control" name="apellidoMaterno"
-                        value="{{ old('apellidoMaterno', $candidato->apellidoMaterno) }}" required>
+                        value="{{ old('apellidoMaterno', $candidato->apellidoMaterno) }}" required oninput="this.value = this.value.toUpperCase()">
                 </div>
             </div>
 
@@ -65,17 +80,6 @@
                         <option value="Otro" {{ old('vacante', $candidato->vacante) === 'Otro' ? 'selected' : '' }}>Otro
                         </option>
                     </select>
-                </div>
-                <div class="col-md-6 mb-3 mt-4">
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="fotografia" name="fotografia"
-                            accept=".jpg, .png" required onchange="previewImage(this)">
-                        <label class="custom-file-label" for="fotografia">Seleccionar archivo</label>
-                    </div>
-                    <div id="file-preview">
-                        <img id="preview-image" src="#" alt="Vista previa de la imagen"
-                            style="display: none; max-width: 100%; max-height: 200px;">
-                    </div>
                 </div>
             </div>
 
@@ -144,7 +148,7 @@
                 <div class="col-md-6 mb-3">
                     <label class="form-label">Domicilio</label>
                     <input type="text" class="form-control" name="domicilio"
-                        value="{{ old('domicilio', $candidato->domicilio) }}" required>
+                        value="{{ old('domicilio', $candidato->domicilio) }}" required oninput="this.value = this.value.toUpperCase()">
                 </div>
                 <div class="col-md-6 mb-3">
                     <label class="form-label">Correo Personal</label>
@@ -163,7 +167,7 @@
                 <div class="col-md-4 mb-3">
                     <label class="form-label">Observaciones</label>
                     <input class="form-control" name="observaciones"
-                        value="{{ old('observaciones', $candidato->observaciones) }}" rows="4">
+                        value="{{ old('observaciones', $candidato->observaciones) }}" rows="4" oninput="this.value = this.value.toUpperCase()">
                 </div>
 
                 <div class="col-md-5 mb-3">
