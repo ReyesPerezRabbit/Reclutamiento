@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="https://htpro.dev/wp-content/uploads/2022/06/Group-7.svg" type="image/x-icon">
+ 
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ asset('assets/css/master.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"

@@ -53,6 +53,9 @@ Route::controller(CandidatoCreateController::class)->group(function () {
 
     Route::put('Expediente/{candidato}', 'actualizar')->name('candidato.actualizar');;
 
+    Route::get('/descargar-cv/{candidato}', 'descargarCV')->name('candidato.descargarCV');
+
+
 
 });
 
