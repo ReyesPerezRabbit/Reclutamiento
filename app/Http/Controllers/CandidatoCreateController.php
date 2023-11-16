@@ -89,23 +89,33 @@ class CandidatoCreateController extends Controller
 
     public function actualizar(CandidatoRequest $request, CandidatoCreateModels $candidato)
     {
-        // Manejar la carga de la imagen
-        if ($request->hasFile('fotografia')) {
-            $imagen = $request->file('fotografia');
-            $nombreImagen = time() . '_' . $imagen->getClientOriginalName();
-
-            // Definir la ubicación donde se guardará la imagen (por ejemplo, en la carpeta 'fotografias')
-            $ubicacion = public_path('fotografias');
-
-            // Mover la imagen al directorio especificado
-            $imagen->move($ubicacion, $nombreImagen);
-
-            // Guardar la ruta de la imagen en el modelo
-            $candidato->fotografia = 'fotografias/' . $nombreImagen;
-            $candidato->save();
-        }
-
         $candidato->update($request->all());
         return redirect()->route('candidato.lista', $candidato)->with('success', 'Candidato Editado');
+    }
+    
+    public function descargarCV(CandidatoCreateModels $candidato)
+    {
+        // Obtén la URL del CV desde la base de datos
+        $cvUrl = $candidato->cv;
+
+        // Extrae el nombre del archivo del URL (puedes usar una función para hacerlo)
+        $nombreArchivo = basename($cvUrl);
+
+        // Configura una respuesta para descargar el archivo
+        $headers = [
+            'Content-Type' => 'application/pdf', // Cambia el tipo de contenido según el tipo de archivo
+        ];
+
+        return response()->stream(
+            function () use ($cvUrl) {
+                readfile($cvUrl);
+            },
+            200,
+            [
+                'Content-Type' => 'name/cv', // Cambia el tipo de contenido según el tipo de archivo
+                'Content-Disposition' => 'attachment; filename="' . $nombreArchivo . '"',
+            ]
+        );
+        
     }
 }

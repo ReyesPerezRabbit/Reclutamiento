@@ -61,8 +61,7 @@
                                     <option value="DBA">DBA</option>
                                     <option value="Diseñador UI/UX">Diseñador UI/UX</option>
                                     <option value="Contador">Contador</option>
-                                    <option value="Operador">Operador</option>
-                                    <option value="Otro">Otro</option>
+                                    <option value="Operador">Operador</option>                        
                                 </select>
                             </div>
                         </div>
