@@ -2,11 +2,12 @@
 
 use App\Http\Controllers\AgendaEntrevistaController;
 use App\Http\Controllers\CandidatoCreateController;
+use App\Http\Controllers\ChangePasswordController;
+use App\Http\Controllers\ChangeUsernameController;
 use App\Http\Controllers\HomeCrontroller;
 use App\Http\Controllers\LoginCrontroller;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
-
 use Illuminate\Support\Facades\Route;
 
 
@@ -51,11 +52,11 @@ Route::controller(CandidatoCreateController::class)->group(function () {
 
     Route::get('Expediente/{candidato}/editar', 'editar')->name('candidato.editar');
 
-    Route::put('Expediente/{candidato}', 'actualizar')->name('candidato.actualizar');;
+    Route::put('Expediente/{candidato}', 'actualizar')->name('candidato.actualizar');
 
-    Route::get('/descargar-cv/{candidato}', 'descargarCV')->name('candidato.descargarCV');
+    Route::get('descargar-cv/{candidato}', 'descargarCV')->name('descargar.cv');
 
-
+    Route::get('/ver-cv/{id}', 'verCV')->name('ver.cv');
 
 });
 
@@ -68,5 +69,20 @@ Route::controller(AgendaEntrevistaController::class)->group(function () {
     Route::post('/listar-archivos-s3', 'listarArchivosS3')->name('ruta.listarArchivosS3');
 
     Route::get('/muestra-datos-s3', 'mostrarDatosS3')->name('mostrar.datos.s3');
-
 });
+
+// Route::controller(ChangePasswordController::class)->group(function () {
+
+// Route::get('/change-password', 'index')->name('change.password');
+
+// Route::post('/change-password', 'store')->name('change.password');
+
+// });
+
+// Route::controller(ChangeUsernameController::class)->group(function () {
+
+// Route::get('/change-username', 'index')->name('change.username');
+
+// Route::post('/change-username', 'store')->name('change.username');
+
+//     });
