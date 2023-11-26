@@ -249,13 +249,10 @@
 
         </div>
 
-        <div class="mb-3">
+        {{-- <div class="mb-3">
             <label class="form-label">CV (PDF o .doc)</label>
             <input type="file" class="form-control" name="cv" accept=".pdf,.doc" id="cvFile">
-        </div>
-
-        <a href="{{ route('candidato.descargarCV', $candidato) }}" class="btn btn-primary">Descargar CV</a>
-
+        </div> --}}
 
         <div class="text-center mt-3">
             <button type="submit" class="btn btn-primary">Confirmar Registro</button>
