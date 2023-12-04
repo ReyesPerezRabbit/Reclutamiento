@@ -3,7 +3,6 @@
 use App\Http\Controllers\AgendaEntrevistaController;
 use App\Http\Controllers\CandidatoCreateController;
 use App\Http\Controllers\ChangePasswordController;
-use App\Http\Controllers\ChangeUsernameController;
 use App\Http\Controllers\HomeCrontroller;
 use App\Http\Controllers\LoginCrontroller;
 use App\Http\Controllers\LogoutController;
@@ -24,9 +23,9 @@ use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () { return view('welcome');});
 
-Route::get('/register', [RegisterController::class, 'show']);
+// Route::get('/register', [RegisterController::class, 'show']);
 
-Route::post('/register', [RegisterController::class, 'register']);
+// Route::post('/register', [RegisterController::class, 'register']);
 
 Route::get('/', [LoginCrontroller::class, 'show']);
 
@@ -40,6 +39,18 @@ Route::get('/logout', [LogoutController::class, 'logout']);
 
 
 #empezar haci con estps
+
+// Route::controller(loginCrontroller::class)->group(function () {
+
+
+// });
+
+Route::controller(RegisterController::class)->group(function () {
+
+    Route::get('/newuseradmin', 'show')->name('register.show');
+
+    Route::post('/newuser', 'register')->name('register.register');
+});
 
 
 Route::controller(CandidatoCreateController::class)->group(function () {
@@ -57,32 +68,16 @@ Route::controller(CandidatoCreateController::class)->group(function () {
     Route::get('descargar-cv/{candidato}', 'descargarCV')->name('descargar.cv');
 
     Route::get('/ver-cv/{id}', 'verCV')->name('ver.cv');
-
 });
 
 Route::controller(AgendaEntrevistaController::class)->group(function () {
 
     Route::get('Entrevista', 'cita')->name('candidato.entrevista');
 
-    Route::post('/subir-archivo-s3', 'subirArchivoS3')->name('subir.archivo.s3');
-
     Route::post('/listar-archivos-s3', 'listarArchivosS3')->name('ruta.listarArchivosS3');
-
-    Route::get('/muestra-datos-s3', 'mostrarDatosS3')->name('mostrar.datos.s3');
 });
 
-// Route::controller(ChangePasswordController::class)->group(function () {
+Route::controller(ChangePasswordController::class)->group(function () {
 
-// Route::get('/change-password', 'index')->name('change.password');
-
-// Route::post('/change-password', 'store')->name('change.password');
-
-// });
-
-// Route::controller(ChangeUsernameController::class)->group(function () {
-
-// Route::get('/change-username', 'index')->name('change.username');
-
-// Route::post('/change-username', 'store')->name('change.username');
-
-//     });
+    Route::get('reset_password', 'contra')->name('candidato.password');
+});

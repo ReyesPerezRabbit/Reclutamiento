@@ -16,7 +16,8 @@
             <a href="/">Pagina principal</a>
             <a href="{{ route('candidato.lista') }}">Lista de evaluación</a>
             <a href="{{ route('candidato.mostrar') }}">Añadir candidatos</a>
-            <a href="{{ route('candidato.entrevista') }}">Agendar entrevista</a> 
+            {{-- <a href="{{ route('candidato.entrevista') }}">Agendar entrevista</a> --}}
+            <a href="{{ route('candidato.password') }}">Cambiar contraseña</a>
             <a href="/logout" class="logout-button">Cerrar sesión</a>
         </div>
     </nav>
