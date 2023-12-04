@@ -119,7 +119,9 @@
                             <td>{{ $listas->domicilio }}</td>
                             <td>@php echo date('d/m/Y', strtotime($listas->fechaEnvioEvaluacion)); @endphp</td>
                             <td>{{ $listas->observaciones }}</td>
-                            <td>
+                            <td>{{ $listas->cv }}</td>
+
+                            {{-- <td>
                                 @if ($listas->cv)
                                     <!-- Muestra el enlace o el nombre del archivo del CV -->
                                     <a href="{{ route('descargar.cv', $listas->id) }}">Descargar CV</a>
@@ -127,15 +129,15 @@
                                 @else
                                     Sin archivo adjunto
                                 @endif
-                            </td>
+                            </td>--}}
 
-                            <td>
-                                @if($listas->cv)
+                            {{-- <td>
+                                {{-- @if($listas->cv)
                                     <a href="{{ route('descargar.cv', $listas->id) }}" target="_blank">Ver CV</a>
                                 @else
                                     Sin archivo adjunto
                                 @endif
-                            </td>
+                            </td> --}} 
 
                             <td>
                                 <a href="{{ route('candidato.editar', $listas->id) }}" class="boton-carpeta">
